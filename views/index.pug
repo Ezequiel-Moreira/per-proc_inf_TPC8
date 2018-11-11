@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .w3-container
+    .w3-card-4
+      header.w3-container.w3-teal
+        h3 Upload de ficheiro
+      .w3-container
+        form.w3-container.w3-light-blue(action='/processaForm', method="POST" ,id='processaForm', enctype='multipart/form-data')
+          fieldset
+            legend Adicionar Ficheiro
+            label.w3-text-black
+              b Ficheiro
+            input.w3-input.w3-border.w3-grey(id='file', type='file',name = 'ficheiro')
+            label.w3-text-black
+              b Descrição
+            textarea.w3-input.w3-border.w3-grey(id='desc' rows='3' cols='80', name='desc')
+            button.w3-button.w3-green(type='submit',id='adicionar') Submeter ficheiro
+      .w3-container
+        .w3-card-4
+          header.w3-container.w3-green       
+            h4 Lista de ficheiros
+          .w3-container
+            ol(id='ficheiros')
+          footer
+  footer.w3-container.w3-teal
+        adress Criado por Ezequiel Moreira
+
