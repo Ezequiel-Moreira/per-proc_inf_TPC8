@@ -6,7 +6,7 @@ block content
       header.w3-container.w3-teal
         h3 Upload de ficheiro
       .w3-container
-        form.w3-container.w3-light-blue(id='FormData')
+        form.w3-container.w3-light-blue(id='FormData', action='/processaForm', method='POSt', enctype='multipart/form-data')
           fieldset
             legend Adicionar Ficheiro
             label.w3-text-black
@@ -15,7 +15,7 @@ block content
             label.w3-text-black
               b Descrição
             textarea.w3-input.w3-border.w3-grey(id='desc' rows='3' cols='80', name='desc')
-            button.w3-button.w3-green(id='adicionar') Submeter ficheiro
+            input.w3-input.w3-blue(type='submit', value='Submeter ficheiro') 
       .w3-container
         .w3-card-4
           header.w3-container.w3-green       

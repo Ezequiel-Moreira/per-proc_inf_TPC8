@@ -25,10 +25,6 @@ router.get('/ficheiros', (req,res)=>{
 
 
 router.post('/processaForm',(req,res,next)=>{
-  var p = req.body
-  console.log('==================================')
-  console.log(p)
-  console.log('==================================')
   var form = new formidable.IncomingForm()
   form.parse(req,(erro,fields,files)=>{
       

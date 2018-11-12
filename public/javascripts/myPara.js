@@ -13,8 +13,7 @@ $(()=>{
 
   function ajaxPost(){
     var formulario = $('#FormData')
-    alert(typeof(formulario))
-    alert(formulario.val())
+    alert(formulario)
     var fd = new FormData(formulario)
     alert(fd)
     $.ajax({
